@@ -10,15 +10,24 @@ body {
 }
 
 .bg {
-    background: url(../images/grass.jpg);
     height: 100vh;
     width: 100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     filter: grayscale(60%);
     opacity: 0.5;
     position: relative;
+}
+
+.bg_main {
+    background: url(../images/grass.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg_sub1 {
+    background: url(../images/sky.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .intro {
@@ -42,7 +51,13 @@ body {
     z-index: 200;
     font-size: 34px;
     font-family: 'Montserrat', sans-serif;
+}
 
+.intro_title a {
+    color: white;
+    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 }
 
 .content {
@@ -115,6 +130,46 @@ body {
     box-shadow: 3px 7px 13px 0px rgba(7, 4, 6, 0.94);
 }
 
+.plan_container {
+    border: 1px solid rgba(238, 238, 238, 0.3);
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 30px 30px;
+}
+
+.plan {
+    width: 50%;
+    padding : 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    text-decoration: none;
+    color:white;
+    
+}
+.plan h1 {
+    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+}
+.plan p {
+    font-size: 20px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.plan ul {
+    font-size: 16px;
+    font-family: 'Maven Pro', sans-serif;
+    padding:20px;
+}
+.plan li {
+    line-height: 22px;
+    padding:10px;
+}
+
 .social_container {
     width: 30%;
     max-width: 1200px;
@@ -160,3 +215,34 @@ body {
     padding: 9px;
     color: rgba(255, 255, 255, .4);
 }
+
+#box {
+    background: rgb(200,200,200);
+    position:absolute;
+    left:200px;
+    width:200px;
+    height:230px;
+    padding:0;
+    z-index: 10;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+    border: 1px solid rgba(0,0,0,0.2);
+    background-image: url("https://i.pravatar.cc/300");
+    background-position: center;
+  }
+  
+  #boxheader {
+    background: white;
+    opacity: 0.6;
+    width:199px;
+    height:35px;
+    left: -2px;
+    top:-1px;
+    position:absolute;
+    margin: 0;
+    z-index:20;
+    cursor:grab;
+    border: 2px white solid;
+    border-radius: 10px 10px 0 0;
+  } 
+  
