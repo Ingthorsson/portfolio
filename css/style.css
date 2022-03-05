@@ -20,12 +20,13 @@
 
     --link-hover: rgba(255, 255, 255, 0.6);
 
-    font-size: 16px;
+    
   }
 
+
 body {
-    background: var(--main-bg-color-dark);
-    background: linear-gradient(0deg, var(--main-bg-color-dark) 0%, var(--main-bg-color-medium) 100%);
+    
+    background-color: rgb(48, 43, 27);
 }
 
 .card-link {
@@ -36,21 +37,24 @@ body {
 .card-link:hover {
     color: var(--link-hover);
 }
-
+ 
 .bg {
     height: 100vh;
     width: 100vw;
     filter: grayscale(60%);
-    opacity: 0.5;
+    opacity: 0.8;
     position: relative;
 }
 
-.bg_main {
-    background: url(../images/grass.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.bgimage{
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 45%, transparent 85%);
+    -moz-mask-image: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 45%, transparent 85%);
+    height: 100vh;
+    width: 100vw;
 }
+    
+
 .bg_sub1 {
     background: url(../images/dandy.jpg);
     background-position: center;
@@ -93,10 +97,11 @@ body {
     left: 30px;
     right: 30px;
     top: 100px;
-    /* border: red 1px solid; */
     display: flex;
     flex-direction: column;
 }
+
+/* s */
 
 .avitar {
     border-radius: 50%;
@@ -165,7 +170,7 @@ body {
 
 .card-font {
     font-family: 'Aldrich', sans-serif;
-    font-size:1.3rem;
+    font-size:1.2rem;
     line-height: 1.2em;
 }
 
