@@ -4,46 +4,54 @@
 }
 
 .plan_container {
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba(238, 238, 238, 0.3);
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    padding: 30px 30px;
-    border-radius: 2.5rem;
+    min-width: 320rem;
+    margin: 0 auto;
+    padding: 30rem;
+    border-radius: 24rem;
     background-color: var(--main-bg-burger);
 }
 
+.hero {
+    /* outline: 1px solid red; */
+    flex-basis: 50%;
+}
 .hero-image {
-    max-height: 451px;
+    max-width: 100%;
 }
 
 .plan {
-    width: 50%;
+    flex-basis: 50%;
     padding : 50px;
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
     text-decoration: none;
     color:var(--white-solid);
-    border-radius: 2.5rem;
-    
+    border-radius: 24rem; 
 }
+
+@media screen and ( min-width: 844px ) {
+    .plan_container {
+        flex-direction: row;
+    }
+}
+
 .plan h1 {
-    font-size: 34px;
+    font-size: 28rem;
     font-family: 'Montserrat', sans-serif;
 }
 .plan p {
-    font-size: 20px;
+    font-size: 16rem;
     font-family: 'Maven Pro', sans-serif;
 }
 
-.plan ul {
-    font-size: 16px;
+.plan ol {
+    font-size: 14rem;
     font-family: 'Maven Pro', sans-serif;
-    padding:20px;
+    padding:20rem;
 }
 .plan li {
     line-height: 22px;
@@ -54,29 +62,29 @@
 #box {
     background: rgb(200,200,200);
     position:absolute;
-    left:200px;
-    width:200px;
-    height:230px;
+    left:100rem;
+    width:150rem;
+    height:150rem;
     padding:0;
     z-index: 10;
+    cursor:grab;
     border-radius: 10px;
     filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
     border: 1px solid rgba(0,0,0,0.2);
-    background-image: url("https://api.lorem.space/image/burger?w=200&h=200");
+    background-image: url("https://api.lorem.space/image/burger?w=150&h=150");
     background-position: center;
   }
   
   #boxheader {
     background: var(--white-solid);
-    opacity: 0.6;
-    width:199px;
-    height:35px;
+    opacity: 0.4;
+    width:149rem;
+    height:30rem;
     left: -2px;
     top:-1px;
     position:absolute;
     margin: 0;
     z-index:20;
-    cursor:grab;
     border: 2px var(--white-solid) solid;
     border-radius: 10px 10px 0 0;
   }

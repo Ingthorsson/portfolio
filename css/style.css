@@ -29,6 +29,8 @@
     --base-opacity-1: calc(var(--base-opacity) - 0.06);
     --base-opacity-2: calc(var(--base-opacity) - 0.66);
 
+    font-size: 6.2%;
+
   }
 
 
@@ -36,13 +38,22 @@ body {
     background-color: rgb(48, 43, 27);
 }
 
+.container { 
+    width: 100%;
+    height:100%;
+    outline-offset: -2px;
+    min-width: 320rem;
+
+}
+
+
 .card-shadow-dark {
-    -webkit-box-shadow: 3px 7px 13px 0px rgba(7, 4, 6, var(--base-opacity-1));
-    box-shadow: 3px 7px 13px 0px rgba(7, 4, 6, var(--base-opacity-1));
+    -webkit-box-shadow: 3rem 7rem 13rem 0rem rgba(7, 4, 6, var(--base-opacity-1));
+    box-shadow: 3rem 7rem 13rem 0rem rgba(7, 4, 6, var(--base-opacity-1));
 }
 .card-shadow-light {
-    -webkit-box-shadow: 3px 7px 13px 0px rgba(7, 4, 6, var(--base-opacity-2));
-    box-shadow: 3px 7px 13px 0px rgba(7, 4, 6, var(--base-opacity-2));
+    -webkit-box-shadow: 3rem 7rem 13rem 0rem rgba(7, 4, 6, var(--base-opacity-2));
+    box-shadow: 3rem 7rem 13rem 0rem rgba(7, 4, 6, var(--base-opacity-2));
 }
 
 .card-link {
@@ -55,11 +66,13 @@ body {
 }
  
 .bg {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     filter: grayscale(60%);
     opacity: 0.8;
-    position: relative;
+    position: absolute;
+    z-index: -10;
+    min-width: 320rem;
 }
 
 
@@ -70,87 +83,63 @@ body {
     width: 100vw;
 }
     
-
-.bg_sub1 {
-    background: url(../images/dandy.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.intro {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--black);
-    width: 100%;
-    height: 2s0px;
+.header {
+    min-width: 320rem;
+    max-height: 240rem;
     z-index: 100;
+    margin: 0 0 20rem 0;
 }
 
-.intro_title {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.header .intro_title {
     background-color: var(--main-bg-color-light);
-    box-shadow: 10px 10px var(--black)0;
+    box-shadow: 10rem 10rem var(--black);
     color: var(--white-solid);
-    padding: 10px 20px;
-    z-index: 200;
-    font-size: 34px;
+    padding: 10rem 20rem;
+    font-size: 24rem;
     font-family: 'Montserrat', sans-serif;
+    width: fit-content;
+    margin:  0 0 10rem 0;
 }
 
-.intro_title a {
+.header .intro_title a {
     color: var(--white-solid);
-    font-size: 34px;
+    font-size: 24rem;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
 
 .content {
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    top: 100px;
-    display: flex;
-    flex-direction: column;
+    min-width: 320rem;
+    padding: 0 20rem 0 15rem;
 }
-
-/* s */
 
 .avitar {
     border-radius: 50%;
-    border: solid var(--white-trans) 4px;
-    display: inline-block;
-    margin: auto;
+    border: solid var(--white-trans) 4rem;
+    margin:  20rem auto 0 auto;
     z-index: 10;
 }
 
 .avitar__L {
-    height: 125px;
-    width: 125px;
+    height: 125rem;
+    width: 125rem;
 }
-
-/* .avitar__S {
-    height: 50px;
-    width: 50px;
-} */
 
 .avitar__id {
     background-image: url(../images/me.jpg);
-    background-size: 200px;
+    background-size: 200rem;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .id {
-    padding: 8px 0 10px 0;
+    padding: 8rem 0 10rem 0;
     margin-left: auto;
     margin-right: auto;
-    font-size: 2rem;
+    font-size: 24rem;
     font-family: 'Maven Pro', sans-serif;
     color: var(--white-solid);
+    width: fit-content;
 }
 
 .dot_social {
@@ -158,80 +147,66 @@ body {
 }
 
 .card_container {
-    outline: 1px solid rgba(238, 238, 238, 0.3);
+    outline: 1rem solid rgba(238, 238, 238, 0.3);
     width: 100%;
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1200rem;
+    min-width: 320rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5em 0;
+    gap: 12rem; 
+    padding: 15rem;
 }
 
 .card {
-    width: 90%;
-    min-height: 130px;
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    border-radius: 10rem;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    
-    margin-bottom: 1.2em;
-    padding: 0.6em;
+    min-height: 100rem;
     display: flex;
-    align-items:center;
-    justify-content: center;
+    align-items: center;
+    justify-content:center;
+    min-width: 280rem;
+    width: 80%;
 }
 
 .card-font {
     font-family: 'Aldrich', sans-serif;
-    font-size:1.2rem;
-    line-height: 1.2em;
+    font-size:18rem;
 }
 
 
-@media (min-width: 600px) {
-  
-    .card {
-        width: 30rem;
-    }
-}
+@media (min-width: 820px) {
 
-@media (min-width: 1000px) {
-  
     .card_container {
         flex-direction: row;
-        justify-content: space-around;
-        align-items: stretch;
     }
+
     .card {
-        width: 30%;
+        min-width: 180rem;
+        width: 100%;
     }
 }
 
 
-
-.content .social_container {
-    min-width: 15rem;
-    margin-left: auto;
-    margin-right: auto;
+ .social_container {
+    width:320rem;
+    margin: 30rem auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem 0;
-    contain: paint;
+    justify-content: space-evenly;
 }
 
 /* Style all font awesome icons */
 .fa {
-    font-size: 30px;
-    width: 50px;
-    height: 50px;
+    font-size: 30rem;
+    width: 50rem;
+    height: 50rem;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    z-index: 10;
-    border: 2px solid rgba(255, 255, 255, .4);
+    z-index: 1;
+    border: 2rem solid rgba(255, 255, 255, .4);
 }
 
 /* Add a hover effect if you want */
@@ -241,18 +216,18 @@ body {
 
 /* Facebook */
 .fa-facebook {
-    padding: 9px 1px 1px 0;
+    padding: 9rem 1rem 1rem 0;
     color: rgba(255, 255, 255, .4);
 }
 
 /* Twitter */
 .fa-twitter {
-    padding: 9px 1px 1px 3px;
+    padding: 9rem 1rem 1rem 3rem;
     color: rgba(255, 255, 255, .4);
 }
 
 /* linkedin */
 .fa-linkedin {
-    padding: 9px;
+    padding: 9rem;
     color: rgba(255, 255, 255, .4);
 }
