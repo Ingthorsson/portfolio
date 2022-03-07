@@ -6,6 +6,7 @@ $(document).ready(function () {
   $(".draggable").draggableTouch();
 
   $(".draggable").bind("dragstart", function (e, pos) {
+
       console.log("dragstart:", this, pos.left + "," + pos.top);
   }).bind("dragend", function (e, pos) {
       console.log("dragend:", this, pos.left + "," + pos.top);
@@ -27,5 +28,23 @@ if ("ontouchstart" in document.documentElement) {
       }
   };
 }
+
+const dropTarget = document.querySelector('.drop-target');
+let rect = dropTarget.getBoundingClientRect()
+
+console.log("x: "+ rect.x);
+console.log("y: "+ rect.y);
+console.log(dropTarget[0])
+dropTarget.addEventListener("mouseover", function( e ) 
+{
+    console.log('OOVVER', e)
+    // highlight the mouseover target
+    //event.target.style.color = "orange";
+  
+    // reset the color after a short delay
+    // setTimeout(function() {
+    //   event.target.style.color = "";
+    // }, 500);
+  }, false);
 
 

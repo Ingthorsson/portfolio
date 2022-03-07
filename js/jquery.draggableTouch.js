@@ -126,11 +126,18 @@
             var offset = null;
             
             var move = function(e) {
+                
                 if (useTransform) {
                     element.css({
                         "transform": "translate3d(" + (e.pageX - offset.x) + "px, " + (e.pageY - offset.y) + "px, 0px)",
                     });
                 } else {
+                    if ( e.pageX > rect.x && e.pageX < (rect.x +120))  {
+                        console.log('true')
+                    } else {
+                        console.log('false')
+                    }
+                    
                     element.css({
                         top: e.pageY - offset.y,
                         left: e.pageX - offset.x,

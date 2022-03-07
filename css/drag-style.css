@@ -58,11 +58,26 @@
     padding:10px;
 }
 
+.assemble-wrapper {
+    outline:red 2px solid;
+    min-width: 320rem;
+    padding: 0 20rem 0 15rem;
+    display: flex;
+   
+}
+
+.drop-target {
+    height: 120rem;
+    width: 120rem;
+    background-color: red;
+    margin: 30rem auto;
+    
+}
 
 #box {
     background: rgb(200,200,200);
     position:absolute;
-    left:100rem;
+    left:0;
     width:150rem;
     height:150rem;
     padding:0;
