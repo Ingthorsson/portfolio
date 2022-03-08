@@ -70,8 +70,14 @@
     height: 120rem;
     width: 120rem;
     background-color: red;
-    margin: 30rem auto;
-    
+    margin: 30rem auto; 
+}
+
+.drop-detected {
+    position: absolute;
+    transform: scale(0.1);
+    left: 200rem;
+    opacity: 0;
 }
 
 #box {

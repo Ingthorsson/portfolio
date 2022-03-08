@@ -132,10 +132,15 @@
                         "transform": "translate3d(" + (e.pageX - offset.x) + "px, " + (e.pageY - offset.y) + "px, 0px)",
                     });
                 } else {
+                    // mystuff
+                    //https://www.delftstack.com/howto/javascript/get-position-of-element-in-javascript/
                     if ( e.pageX > rect.x && e.pageX < (rect.x +120))  {
                         console.log('true')
+                        dropDetected(true);
+
                     } else {
-                        console.log('false')
+                        console.log('false');
+                        dropDetected(false);
                     }
                     
                     element.css({

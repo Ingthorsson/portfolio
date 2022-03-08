@@ -32,19 +32,37 @@ if ("ontouchstart" in document.documentElement) {
 const dropTarget = document.querySelector('.drop-target');
 let rect = dropTarget.getBoundingClientRect()
 
-console.log("x: "+ rect.x);
-console.log("y: "+ rect.y);
-console.log(dropTarget[0])
-dropTarget.addEventListener("mouseover", function( e ) 
-{
-    console.log('OOVVER', e)
-    // highlight the mouseover target
-    //event.target.style.color = "orange";
-  
-    // reset the color after a short delay
-    // setTimeout(function() {
-    //   event.target.style.color = "";
-    // }, 500);
-  }, false);
+let toggle = false;
 
+function dropDetected(toggleSwitch) {
+    
+    if (!toggle && toggleSwitch) {
+        console.log('BANG');
+        toggle = true;
+        runDetected(1);
+    }
 
+    if (toggle && !toggleSwitch) {
+        console.log('OUT');
+        toggle = false;
+        runDetected(0);
+    }
+}
+
+function runDetected(onOff) {
+    const pulse = gsap.timeline({ paused: true})
+    .to(".drop-detected", {
+        opacity: 1,
+        scale:1.5, 
+        duration:0.5, 
+        repeat:-1, 
+        yoyo:true
+    });
+    if (onOff === 1) {
+        pulse.play(0);
+        console.log('start stsrt start', pulse)  
+    } else {
+        pulse.kill();
+        console.log('stp stop stop', pulse)  
+    }
+ }
