@@ -134,12 +134,13 @@
                 } else {
                     // mystuff
                     //https://www.delftstack.com/howto/javascript/get-position-of-element-in-javascript/
-                    if ( e.pageX > rect.x && e.pageX < (rect.x +120))  {
-                        console.log('true')
+
+                    let xRange = e.pageX > targetRect.left && e.pageX < targetRect.right;
+                    let yRange = e.pageY > targetRect.top && e.pageY < targetRect.bottom;
+                    if ( xRange && yRange)  {
                         dropDetected(true);
 
                     } else {
-                        console.log('false');
                         dropDetected(false);
                     }
                     

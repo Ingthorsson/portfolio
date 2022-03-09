@@ -76,7 +76,7 @@
 .drop-detected {
     position: absolute;
     transform: scale(0.1);
-    left: 200rem;
+    left: 200px;
     opacity: 0;
 }
 

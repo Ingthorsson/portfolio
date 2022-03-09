@@ -1,6 +1,6 @@
 // 
 // enable dragging
-
+//
 $(document).ready(function () {
 
   $(".draggable").draggableTouch();
@@ -30,39 +30,56 @@ if ("ontouchstart" in document.documentElement) {
 }
 
 const dropTarget = document.querySelector('.drop-target');
-let rect = dropTarget.getBoundingClientRect()
+const pulseRing = document.getElementById("pulseRing");
+let targetRect = dropTarget.getBoundingClientRect();
+const rectCenterX = targetRect.height / 2  + 15;
+const rectCenterY = targetRect.width / 2 + 15;
+setPulseLocation();
 
+//dropTarget.style.top = targetRect.x;
+
+window.addEventListener("resize", function(e) {
+    targetRect = dropTarget.getBoundingClientRect();
+    setPulseLocation();
+});
+
+function setPulseLocation() {
+    pulseRing.style.left = (targetRect.x - rectCenterX).toString() + "px";
+    pulseRing.style.top = (targetRect.y - rectCenterY).toString() + "px";
+}
+
+const dropPulse = document.querySelector('.drop-detected');
+console.log("prop= ", dropPulse, targetRect);
+
+//
+// Toggle the drop detected animation on and off based on the drag selection being over the target 
+//
 let toggle = false;
 
-function dropDetected(toggleSwitch) {
-    
+const dropDetected = (toggleSwitch) => {
     if (!toggle && toggleSwitch) {
-        console.log('BANG');
+        console.log('ON');
         toggle = true;
-        runDetected(1);
+        pulse.play(0);
     }
 
     if (toggle && !toggleSwitch) {
-        console.log('OUT');
+        console.log('OFF');
         toggle = false;
-        runDetected(0);
+        pulse.pause(0);
     }
-}
+};
 
-function runDetected(onOff) {
-    const pulse = gsap.timeline({ paused: true})
-    .to(".drop-detected", {
-        opacity: 1,
-        scale:1.5, 
-        duration:0.5, 
-        repeat:-1, 
-        yoyo:true
-    });
-    if (onOff === 1) {
-        pulse.play(0);
-        console.log('start stsrt start', pulse)  
-    } else {
-        pulse.kill();
-        console.log('stp stop stop', pulse)  
-    }
- }
+//
+// Over the drop target animation 
+//
+const pulse = gsap.timeline({ paused: true})
+.to(".drop-detected", {
+    opacity: 1,
+    scale:1.5, 
+    duration:0.5, 
+    repeat:-1, 
+    yoyo:true
+});
+
+
