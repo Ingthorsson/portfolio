@@ -135,8 +135,8 @@
                     // mystuff
                     //https://www.delftstack.com/howto/javascript/get-position-of-element-in-javascript/
 
-                    let xRange = e.pageX > targetRect.left && e.pageX < targetRect.right;
-                    let yRange = e.pageY > targetRect.top && e.pageY < targetRect.bottom;
+                    let xRange = e.pageX > target.targetRect.left && e.pageX < target.targetRect.right;
+                    let yRange = e.pageY > target.targetRect.top && e.pageY < target.targetRect.bottom;
                     if ( xRange && yRange)  {
                         dropDetected(true);
 
@@ -151,6 +151,9 @@
                 }
             };
             var up = function(e) {
+                console.log(dragItem.onTrigger);
+                backHome(dragItem);
+                
                 element.unbind("mouseup.draggableTouch", up);
                 $(document).unbind("mousemove.draggableTouch", move);
                 element.trigger("dragend", {
@@ -160,6 +163,8 @@
             };
             element.bind("mousedown.draggableTouch", function(e) {
                 var pos = element.position();
+                console.log(dragItem.onTrigger);
+                
                 offset = {
                     x: e.pageX - pos.left,
                     y: e.pageY - pos.top

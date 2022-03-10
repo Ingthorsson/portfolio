@@ -29,43 +29,54 @@ if ("ontouchstart" in document.documentElement) {
   };
 }
 
+//
+// 
+//
 const dropTarget = document.querySelector('.drop-target');
 const pulseRing = document.getElementById("pulseRing");
-let targetRect = dropTarget.getBoundingClientRect();
-const rectCenterX = targetRect.height / 2  + 15;
-const rectCenterY = targetRect.width / 2 + 15;
+const target = {
+    targetRect: dropTarget.getBoundingClientRect(),
+    rectCenterX: dropTarget.getBoundingClientRect().height / 2  + 15,
+    rectCenterY: dropTarget.getBoundingClientRect().width / 2 + 15
+};
+const dragItem = {
+    box: document.getElementById("box"),
+    toggle: false,
+    dragging: false,
+    onTrigger: false,
+    homeX: 0,
+    homeY: 0
+}
+
+// 
+// Set location
+//
 setPulseLocation();
-
-//dropTarget.style.top = targetRect.x;
-
 window.addEventListener("resize", function(e) {
-    targetRect = dropTarget.getBoundingClientRect();
+    target.targetRect = dropTarget.getBoundingClientRect();
     setPulseLocation();
 });
 
 function setPulseLocation() {
-    pulseRing.style.left = (targetRect.x - rectCenterX).toString() + "px";
-    pulseRing.style.top = (targetRect.y - rectCenterY).toString() + "px";
+    pulseRing.style.left = (target.targetRect.x - target.rectCenterX).toString() + "px";
+    pulseRing.style.top = (target.targetRect.y - target.rectCenterY).toString() + "px";
 }
 
 const dropPulse = document.querySelector('.drop-detected');
-console.log("prop= ", dropPulse, targetRect);
 
 //
 // Toggle the drop detected animation on and off based on the drag selection being over the target 
 //
-let toggle = false;
-
 const dropDetected = (toggleSwitch) => {
-    if (!toggle && toggleSwitch) {
-        console.log('ON');
-        toggle = true;
+    if (!dragItem.toggle && toggleSwitch) {
+        dragItem.onTrigger = true;
+        dragItem.toggle = true;
         pulse.play(0);
     }
 
-    if (toggle && !toggleSwitch) {
-        console.log('OFF');
-        toggle = false;
+    if (dragItem.toggle && !toggleSwitch) {
+        dragItem.onTrigger = false;
+        dragItem.toggle = false;
         pulse.pause(0);
     }
 };
@@ -75,11 +86,23 @@ const dropDetected = (toggleSwitch) => {
 //
 const pulse = gsap.timeline({ paused: true})
 .to(".drop-detected", {
-    opacity: 1,
-    scale:1.5, 
-    duration:0.5, 
+    opacity: 0.7,
+    scale:1.2, 
+    duration:0.45, 
     repeat:-1, 
     yoyo:true
 });
+
+const home = gsap.timeline({ paused: true})
+.to("#box", {
+    left: 0,
+    top: 300, 
+    duration:0.45
+});
+
+function backHome(box) {
+    console.log('eeek')
+    home.play();
+}
 
 
