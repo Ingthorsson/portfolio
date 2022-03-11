@@ -1,5 +1,5 @@
 // 
-// enable dragging
+// enable draggi
 //
 $(document).ready(function () {
 

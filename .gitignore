@@ -1,1 +1,18 @@
+# dependencies installed by npm
+node_modules/
 resources/
+
+# build artifacts
+dist
+css
+
+# secrets and errors
+.env
+.log
+
+
+# macOS related files
+.DS_Store
+
+# premium fonts
+/fonts
