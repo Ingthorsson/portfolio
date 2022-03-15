@@ -3,16 +3,15 @@ node_modules/
 resources/
 
 # build artifacts
-dist
-css
+dist/
+css/
 
 # secrets and errors
 .env
 .log
 
+js/gsap.min.js
 
-# macOS related files
-.DS_Store
 
 # premium fonts
 /fonts

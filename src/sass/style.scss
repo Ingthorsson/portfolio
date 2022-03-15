@@ -30,6 +30,7 @@
     --base-opacity-2: calc(var(--base-opacity) - 0.66);
 
     font-size: 6.2%;
+    font-family: 'Montserrat', sans-serif;
 
   }
 
@@ -276,19 +277,28 @@ body {
 }
 
 .assemble-wrapper {
-    /* outline:red 2px solid; */
+    outline:red 2px solid;
     min-width: 320rem;
     padding: 0 20rem 0 15rem;
     display: flex;
-   
+
+   .drop-target {
+        height: 120rem;
+        width: 120rem;
+        background-color: red;
+        margin: 30rem auto;
+    }
+
+    h1 {
+        font-size: 20rem;
+        color: white;
+    }
+    .clear-order {
+        display:block;
+    }
 }
 
-.drop-target {
-    height: 120rem;
-    width: 120rem;
-    background-color: red;
-    margin: 30rem auto; 
-}
+
 
 .drop-detected {
     position: absolute;
@@ -325,4 +335,19 @@ body {
     z-index:20;
     border: 2px var(--white-solid) solid;
     border-radius: 10px 10px 0 0;
+  }
+
+  .orderSummary {
+      width:225rem;
+      height:200rem;
+      background-color: white;
+      outline: white solid 1px;
+
+      h1 {
+          font-size:25rem;
+      }
+
+      .orderList {
+          font-size: 16rem;
+      }
   }

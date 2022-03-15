@@ -1,8 +1,8 @@
 {
-  "name": "playgroun",
+  "name": "playground",
   "version": "2.0.0",
   "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
-  "main": "public/index.html",
+  "main": "scr/index.html",
   "author": "Kevin Powell",
   "scripts": {
     "build:sass": "sass src/sass:dist/css",

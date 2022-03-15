@@ -41,6 +41,8 @@ const target = {
 };
 const dragItem = {
     box: document.getElementById("box"),
+    type:"burger",
+    name:"Big Boy",
     toggle: false,
     dragging: false,
     onTrigger: false,
@@ -68,6 +70,7 @@ const dropPulse = document.querySelector('.drop-detected');
 // Toggle the drop detected animation on and off based on the drag selection being over the target 
 //
 const dropDetected = (toggleSwitch) => {
+    console.log("dropped",toggleSwitch)
     if (!dragItem.toggle && toggleSwitch) {
         dragItem.onTrigger = true;
         dragItem.toggle = true;
@@ -92,17 +95,46 @@ const pulse = gsap.timeline({ paused: true})
     repeat:-1, 
     yoyo:true
 });
-
-const home = gsap.timeline({ paused: true})
-.to("#box", {
-    left: 0,
-    top: 300, 
-    duration:0.45
-});
-
-function backHome(box) {
-    console.log('eeek')
-    home.play();
+// 
+// is the item to be ordered dropped over the target
+//
+function isOnTarget(dragItem) {
+    if (dragItem.onTrigger) {
+        console.log('yum')
+        const home = gsap.timeline()
+        .to("#box", {
+            opacity:0,
+            duration:0.45
+        }).set("#box", { css: { left: 40, visability: 'hidden' } });
+        // turn off pulse
+        dropDetected(dragItem.onTrigger=false);
+        // add order to .orderList
+        addOrder(dragItem);
+    } else {
+        const home = gsap.timeline({ paused: true})
+        .to("#box", {
+            left: "40px",
+            top: 300, 
+            duration:0.45
+        }); 
+        home.play();
+    }
 }
+//
+// add order to .orderList
+//
+function addOrder(dragItem) {
+    console.log(dragItem)
+    const node = document.createElement("li");
+    const textnode = document.createTextNode(dragItem.name);
+    node.appendChild(textnode);
+    document.querySelector('.orderList').appendChild(node);
+}
+
+$(".clear-order").click(function () {
+    console.log('reset order',document.getElementById('box'))
+    document.getElementById('box').style.display = 'visible';
+    document.getElementById('box').style.opacity = 1;
+});
 
 

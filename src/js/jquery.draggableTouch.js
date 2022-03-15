@@ -151,8 +151,8 @@
                 }
             };
             var up = function(e) {
-                console.log(dragItem.onTrigger);
-                backHome(dragItem);
+                // 
+                isOnTarget(dragItem);
                 
                 element.unbind("mouseup.draggableTouch", up);
                 $(document).unbind("mousemove.draggableTouch", move);
