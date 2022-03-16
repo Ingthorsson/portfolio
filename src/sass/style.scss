@@ -277,7 +277,7 @@ body {
 }
 
 .assemble-wrapper {
-    outline:red 2px solid;
+    // outline:red 2px solid;
     min-width: 320rem;
     padding: 0 20rem 0 15rem;
     display: flex;
@@ -341,7 +341,7 @@ body {
       width:225rem;
       height:200rem;
       background-color: white;
-      outline: white solid 1px;
+      outline: rgb(0, 0, 0) solid 1px;
 
       h1 {
           font-size:25rem;
@@ -350,4 +350,20 @@ body {
       .orderList {
           font-size: 16rem;
       }
+  }
+
+  .bg-burger {
+      position:absolute;
+      z-index: -10;
+      height:100%;
+      width: 100%;
+      background-color:white;
+  }
+
+  .burger_stand {
+    position:absolute;
+    z-index: -9;
+      width:60%;
+      bottom:0;
+      right:0;
   }
