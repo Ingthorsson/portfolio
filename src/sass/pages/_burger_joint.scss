@@ -1,0 +1,134 @@
+
+//-----------------------------------
+.plan_container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(238, 238, 238, 0.3);
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320rem;
+    margin: 0 auto;
+    padding: 30rem;
+    border-radius: 24rem;
+    background-color: var(--main-bg-burger);
+}
+
+.plan {
+    flex-basis: 50%;
+    padding : 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color:black;
+    border-radius: 24rem; 
+}
+
+.plan h1 {
+    font-size: 28rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.plan p {
+    font-size: 16rem;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.plan ol {
+    font-size: 14rem;
+    font-family: 'Maven Pro', sans-serif;
+    padding:20rem;
+}
+.plan li {
+    line-height: 2rem;
+    padding:10px;
+}
+
+.assemble-wrapper {
+    // outline:red 2px solid;
+    min-width: 320rem;
+    padding: 0 20rem 0 15rem;
+    display: flex;
+
+   .drop-target {
+        height: 120rem;
+        width: 120rem;
+        background-color: red;
+        margin: 30rem auto;
+    }
+
+    h1 {
+        font-size: 20rem;
+        color: white;
+    }
+    .clear-order {
+        display:block;
+    }
+}
+
+
+
+.drop-detected {
+    position: absolute;
+    transform: scale(0.1);
+    left: 200px;
+    opacity: 0;
+}
+
+#box {
+    background: rgb(200,200,200);
+    position:absolute;
+    left:40px;
+    width:150rem;
+    height:150rem;
+    padding:0;
+    z-index: 10;
+    cursor:grab;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+    border: 1px solid rgba(0,0,0,0.2);
+    background-image: url("https://api.lorem.space/image/burger?w=150&h=150");
+    background-position: center;
+  }
+
+  #boxheader {
+    background: var(--white-solid);
+    opacity: 0.4;
+    width:149rem;
+    height:30rem;
+    left: -2px;
+    top:-1px;
+    position:absolute;
+    margin: 0;
+    z-index:20;
+    border: 2px var(--white-solid) solid;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .orderSummary {
+      width:225rem;
+      height:200rem;
+      background-color: white;
+      outline: rgb(0, 0, 0) solid 1px;
+
+      h1 {
+          font-size:25rem;
+      }
+
+      .orderList {
+          font-size: 16rem;
+      }
+  }
+
+  .bg-burger {
+      position:absolute;
+      z-index: -10;
+      height:100%;
+      width: 100%;
+      background-color:white;
+  }
+
+  .burger_stand {
+    position:absolute;
+    z-index: -9;
+      width:60%;
+      bottom:0;
+      right:0;
+  }
