@@ -1,0 +1,30 @@
+
+
+
+  @keyframes yoyo_color {
+    from {
+        fill:rgb(0, 119, 255);
+    }
+        
+    50% {
+        fill:rgb(0, 44, 102);
+    }
+        
+    to {
+        fill:rgb(0, 119, 255);
+    }
+}
+
+@keyframes yoyo_black {
+    from {
+        fill:darkorange;
+    }
+        
+    50% {
+        fill:orange;
+    }
+        
+    to {
+        fill:darkorange;
+    }
+}

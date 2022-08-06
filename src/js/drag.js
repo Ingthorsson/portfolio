@@ -36,9 +36,15 @@ const dropTarget = document.querySelector('.drop-target');
 const pulseRing = document.getElementById("pulseRing");
 const target = {
     targetRect: dropTarget.getBoundingClientRect(),
-    rectCenterX: dropTarget.getBoundingClientRect().height / 2  + 15,
-    rectCenterY: dropTarget.getBoundingClientRect().width / 2 + 15
+    rectCenterX: dropTarget.getBoundingClientRect().height, // / 2  + 15,
+    rectCenterY: dropTarget.getBoundingClientRect().width // / 2 + 15
 };
+
+// pulseRing.style.left = (target.targetRect.x - target.rectCenterX).toString() + "px";
+// pulseRing.style.left = (target.targetRect.x - target.rectCenterX).toString() + "px";
+
+console.log(target.rectCenterX,target.rectCenterY, target.targetRect.x, target.targetRect.y)
+
 const dragItem = {
     box: document.getElementById("box"),
     type:"burger",
@@ -60,8 +66,8 @@ window.addEventListener("resize", function(e) {
 });
 
 function setPulseLocation() {
-    pulseRing.style.left = (target.targetRect.x - target.rectCenterX).toString() + "px";
-    pulseRing.style.top = (target.targetRect.y - target.rectCenterY).toString() + "px";
+    pulseRing.style.left = target.targetRect.x +20  + "px";
+    pulseRing.style.top = target.targetRect.y + "px";
 }
 
 const dropPulse = document.querySelector('.drop-detected');
@@ -90,7 +96,7 @@ const dropDetected = (toggleSwitch) => {
 const pulse = gsap.timeline({ paused: true})
 .to(".drop-detected", {
     opacity: 0.7,
-    scale:1.2, 
+    scale:1.5, 
     duration:0.45, 
     repeat:-1, 
     yoyo:true

@@ -1,0 +1,54 @@
+
+
+.header {
+    max-height: 240rem;
+    z-index: 100;
+    margin: 0 0 20rem 0;
+}
+
+.header .intro_title {
+    background-color: var(--main-bg-color-light);
+    box-shadow: 10rem 10rem var(--black);
+    color: var(--white-solid);
+    padding: 10rem 20rem;
+    font-size: 24rem;
+    font-family: 'Montserrat', sans-serif;
+    width: fit-content;
+    margin:  0 0 10rem 0;
+}
+
+.header .intro_title a {
+    color: var(--white-solid);
+    font-size: 24rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.avitar {
+    border-radius: 50%;
+    border: solid var(--white-trans) 4rem;
+    margin:  20rem auto 0 auto;
+    z-index: 10;
+}
+
+.avitar__L {
+    height: 125rem;
+    width: 125rem;
+}
+
+.avitar__id {
+    background-image: url(../images/me.jpg);
+    background-size: 200rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.id {
+    padding: 8rem 0 10rem 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24rem;
+    font-family: 'Maven Pro', sans-serif;
+    color: var(--white-solid);
+    width: fit-content;
+}

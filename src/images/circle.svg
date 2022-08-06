@@ -5,13 +5,47 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg6643"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="circle.svg"
+   width="85.498032mm"
+   height="85.498657mm"
+   viewBox="0 0 85.498032 85.498657"
    version="1.1"
-   viewBox="0 0 71.24836 71.248878"
-   height="71.248878mm"
-   width="71.24836mm">
+   id="svg6643">
+  <sodipodi:namedview
+     inkscape:current-layer="svg6643"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="161.57226"
+     inkscape:cx="161.57108"
+     inkscape:zoom="2.7294289"
+     showgrid="false"
+     id="namedview7"
+     inkscape:window-height="1534"
+     inkscape:window-width="2199"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
   <defs
-     id="defs6637" />
+     id="defs6637">
+    <filter
+       id="filter835"
+       inkscape:label="Blur"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur833"
+         result="blur"
+         stdDeviation="2 2" />
+    </filter>
+  </defs>
   <metadata
      id="metadata6640">
     <rdf:RDF>
@@ -20,16 +54,12 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     transform="translate(-61.326782,-157.04888)"
-     id="layer1">
-    <path
-       d="m 96.950965,157.04888 a 35.624251,35.624251 0 0 0 -35.624183,35.6247 35.624251,35.624251 0 0 0 35.624183,35.62418 35.624251,35.624251 0 0 0 35.624175,-35.62418 35.624251,35.624251 0 0 0 -35.624175,-35.6247 z m -0.04754,16.39487 a 19.229534,19.229534 0 0 1 0.04754,0 19.229534,19.229534 0 0 1 19.229315,19.22983 A 19.229534,19.229534 0 0 1 96.950965,211.9029 19.229534,19.229534 0 0 1 77.72113,192.67358 19.229534,19.229534 0 0 1 96.903422,173.44375 Z"
-       style="fill:#00ff00;stroke:none;stroke-width:7.9516;stroke-linecap:round;paint-order:markers stroke fill"
-       id="path7206" />
-  </g>
+  <path
+     d="M 42.749019,7.1248879 A 35.624251,35.624251 0 0 0 7.124836,42.749588 35.624251,35.624251 0 0 0 42.749019,78.373768 35.624251,35.624251 0 0 0 78.373194,42.749588 35.624251,35.624251 0 0 0 42.749019,7.1248879 Z m -0.04754,16.3948701 a 19.229534,19.229534 0 0 1 0.04754,0 19.229534,19.229534 0 0 1 19.229315,19.22983 19.229534,19.229534 0 0 1 -19.229315,19.22932 19.229534,19.229534 0 0 1 -19.229835,-19.22932 19.229534,19.229534 0 0 1 19.182292,-19.22983 z"
+     style="fill:#00a8ff;fill-opacity:1;stroke:none;stroke-width:7.9516;stroke-linecap:round;paint-order:markers stroke fill;filter:url(#filter835)"
+     id="path7206" />
 </svg>

@@ -16,6 +16,26 @@
    width="253.33mm">
   <defs
      id="defs61" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg57"
+     inkscape:window-maximized="0"
+     inkscape:window-y="320"
+     inkscape:window-x="1065"
+     inkscape:cy="362.11653"
+     inkscape:cx="478.73386"
+     inkscape:zoom="1.0148667"
+     showgrid="false"
+     id="namedview59"
+     inkscape:window-height="1370"
+     inkscape:window-width="1817"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
   <g
      style="fill:#ff6600"
      id="g42"
@@ -26,18 +46,22 @@
        transform="matrix(.45836 0 0 .42003 -32.247 -256.66)">
       <path
          id="path4"
+         style="fill-rule:evenodd;fill:#ff6600"
          d="m-16.156 642.94c2.4018-45.678 83.861-104.49 61.317-122.76-56.344-45.673-310.16 60.403-304.76 177.91 1.8604 40.521 97.401 14.389 110.27 51.462 9.3845 48.425-58.325 126.74-30.954 158.7 68.342 71.258 209.26 24.497 261.22-51.084 51.967-75.581 69.676-179.32 27.922-174.12-41.754 5.1943-79.877 20.896-110.01-6.9e-4 -11.729-8.1333-15.76-25.848-15.01-40.101z"
          transform="translate(254.76 218.47)" />
       <path
          id="path6"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:6.665"
          d="m-165.34 782.57c2.494-0.95811 4.0313-8.0225-2.2398-6.6276-42.393 9.4299-72.99 54.528-77.214 75.707-1.568 7.8633 15.292 10.209 23.387 8.436 11.803-2.5854 20.737-63.943 56.066-77.515z"
          transform="translate(254.76 218.47)" />
       <path
          id="path8"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:9.2971"
          d="m67.724 619.02c-3.5556 1.4843-7.5993 14.225-2.0206 12.313 48.82-16.734 131.54 0.65245 156.8-16.515 9.3774-6.3738 24.14-18.778 13.7-24.314-15.22-8.0712-114.18 5.8482-168.48 28.516z"
          transform="translate(254.76 218.47)" />
       <ellipse
          id="ellipse10"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          ry="10.205"
          rx="15.686"
          cy="648.61"
@@ -45,6 +69,7 @@
          transform="translate(254.76 218.47)" />
       <ellipse
          id="ellipse12"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          ry="5.8586"
          rx="7.1815"
          cy="574.33"
@@ -52,6 +77,7 @@
          transform="translate(254.76 218.47)" />
       <ellipse
          id="ellipse14"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          ry="5.4807"
          rx="6.4256"
          cy="573.58"
@@ -64,12 +90,14 @@
          transform="translate(254.76 218.47)" />
       <circle
          id="circle18"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          r="8.8199"
          cy="780.32"
          cx="-244.33"
          transform="translate(254.76 218.47)" />
       <ellipse
          id="ellipse20"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          ry="3.2072"
          rx="3.7418"
          cy="735.15"
@@ -77,6 +105,7 @@
          transform="translate(254.76 218.47)" />
       <ellipse
          id="ellipse22"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          ry="3.2072"
          rx="3.4745"
          cy="819.6"
@@ -84,6 +113,7 @@
          transform="translate(254.76 218.47)" />
       <ellipse
          id="ellipse24"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          ry="3.2072"
          rx="2.94"
          cy="757.06"
@@ -91,6 +121,7 @@
          transform="translate(254.76 218.47)" />
       <ellipse
          id="ellipse26"
+         style="fill:#ff6600;paint-order:markers stroke fill"
          ry="3.7418"
          rx="5.6127"
          cy="658.17"
@@ -98,22 +129,28 @@
          transform="translate(254.76 218.47)" />
       <path
          id="path28"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:7.2327"
          d="m69.659 589.25c-2.2906 1.3617-3.3908 10.316 2.4178 8.1636 39.266-14.552 65.763-73.055 68.7-99.876 1.0904-9.958-14.819-11.813-22.319-9.0681-10.934 4.0014-16.35 81.491-48.799 100.78z"
          transform="translate(254.76 218.47)" />
       <path
          id="path30"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:6.665"
          d="m110.51 802.34c2.2354-1.4632 2.8751-10.37-2.9958-7.7615-41.637 18.501-69.967 62.465-74.19 83.644-1.568 7.8633 23.403-4.3772 25.655-12.353 4.9993-17.704 18.091-41.642 51.531-63.53z" />
       <path
          id="path32"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:6.665"
          d="m58.235 779.07c2.2354-1.4632 2.8751-10.37-2.9958-7.7615-41.637 18.501-69.967 62.465-74.19 83.644-1.568 7.8633 23.403-4.3772 25.655-12.353 4.9993-17.704 18.091-41.642 51.531-63.53z" />
       <path
          id="path34"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:2.3134"
          d="m95.453 829.86c0.67656-0.58241 0.87018-4.1278-0.90669-3.0894-12.602 7.3643-21.176 24.864-22.454 33.294-0.47456 3.1299 7.083-1.7423 7.7646-4.9169 1.5131-7.0472 5.4754-16.575 15.596-25.288z" />
       <path
          id="path36"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:6.665"
          d="m131.44 1139.9c-2.6409-0.4045-6.6612 3.6587-0.54967 5.639 43.344 14.044 123.19-5.6295 157.59-36.21 6.4193-4.8044-12.191-4.6819-18.841 0.8864-34.069 28.526-98.691 35.732-138.2 29.684z" />
       <path
          id="path38"
+         style="fill:#ff6600;paint-order:markers stroke fill;stroke-linecap:round;stroke-width:1.959"
          d="m195.52 1129.6c-3.2907 0.6935-1.6759 2.2624 0.11544 2.1126 20.349-1.7016 34.365-5.4267 44.915-13.82 1.936-1.2859-2.8384-7.4995-7.0888-3.8291-6.0317 5.2086-14.87 10.674-37.942 15.536z" />
     </g>
   </g>

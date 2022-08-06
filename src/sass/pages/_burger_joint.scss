@@ -1,25 +1,32 @@
 
 //-----------------------------------
-.plan_container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(238, 238, 238, 0.3);
-    width: 100%;
-    max-width: 1200px;
-    min-width: 320rem;
+.container-wrap {
+    background: rgb(142,242,248);
+    background: radial-gradient(circle, rgba(142,242,248,1) 35%, rgba(1,165,188,1) 100%); 
+    background-size: auto;
+    max-width:1000px;
     margin: 0 auto;
-    padding: 30rem;
-    border-radius: 24rem;
-    background-color: var(--main-bg-burger);
+  
+    display: grid;
+    grid-template-rows: .4fr  1fr 40% 20%;
+
+}
+
+.hero {
+   padding:20rem 40rem 0 40rem;
+    img  {
+        width:100%;
+    }
 }
 
 .plan {
-    flex-basis: 50%;
+    max-width:95%;
     padding : 50px;
     background-color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
     color:black;
     border-radius: 24rem; 
+    margin: auto;
 }
 
 .plan h1 {
@@ -42,16 +49,19 @@
 }
 
 .assemble-wrapper {
-    // outline:red 2px solid;
-    min-width: 320rem;
     padding: 0 20rem 0 15rem;
-    display: flex;
+    // background-color: #eee;
 
    .drop-target {
-        height: 120rem;
-        width: 120rem;
-        background-color: red;
+    //    outline:red 1px solid;
+        height: 220rem;
+        width: 250rem;
         margin: 30rem auto;
+    }
+
+    svg {
+        width: 250rem;
+        height:220rem;
     }
 
     h1 {
@@ -61,46 +71,30 @@
     .clear-order {
         display:block;
     }
+
+    #box {
+        position:absolute;
+        width:120rem;
+        height:120rem;
+        padding:0;
+        z-index: 10;
+        cursor:grab;
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+        border: 1px solid rgba(0,0,0,0.2);
+        background-image: url("https://api.lorem.space/image/burger?w=120&h=120");
+        background-position: center;
+      }
+    
 }
 
-
-
-.drop-detected {
+#pulseRing {
     position: absolute;
-    transform: scale(0.1);
-    left: 200px;
+    width:200rem;
     opacity: 0;
 }
 
-#box {
-    background: rgb(200,200,200);
-    position:absolute;
-    left:40px;
-    width:150rem;
-    height:150rem;
-    padding:0;
-    z-index: 10;
-    cursor:grab;
-    border-radius: 10px;
-    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
-    border: 1px solid rgba(0,0,0,0.2);
-    background-image: url("https://api.lorem.space/image/burger?w=150&h=150");
-    background-position: center;
-  }
 
-  #boxheader {
-    background: var(--white-solid);
-    opacity: 0.4;
-    width:149rem;
-    height:30rem;
-    left: -2px;
-    top:-1px;
-    position:absolute;
-    margin: 0;
-    z-index:20;
-    border: 2px var(--white-solid) solid;
-    border-radius: 10px 10px 0 0;
-  }
 
   .orderSummary {
       width:225rem;
@@ -120,15 +114,28 @@
   .bg-burger {
       position:absolute;
       z-index: -10;
-      height:100%;
-      width: 100%;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
       background-color:white;
   }
 
   .burger_stand {
     position:absolute;
     z-index: -9;
-      width:60%;
-      bottom:0;
-      right:0;
+    width:60%;
+    bottom:0;
+    right:0;
   }
+
+    #ring1, #ring2 {
+        fill:red;
+        animation: yoyo_color 2s ease forwards infinite;
+    }
+
+    #ring3, #ring4 {
+        fill:black;
+        animation: yoyo_black 2s ease forwards infinite;
+    }
+

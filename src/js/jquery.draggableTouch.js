@@ -135,6 +135,9 @@
                     // mystuff
                     //https://www.delftstack.com/howto/javascript/get-position-of-element-in-javascript/
 
+                    // let xRange = e.pageX > target.targetRect.left && e.pageX < target.targetRect.right;
+                    // let yRange = e.pageY > target.targetRect.top && e.pageY < target.targetRect.bottom;
+                    
                     let xRange = e.pageX > target.targetRect.left && e.pageX < target.targetRect.right;
                     let yRange = e.pageY > target.targetRect.top && e.pageY < target.targetRect.bottom;
                     if ( xRange && yRange)  {
